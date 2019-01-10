@@ -15,7 +15,7 @@
 
 - name: Stage ZFS packages if ZFS is enabled
   set_fact:
-    __pve_install_packages: "{{ __pve_install_packages | union(['zfsutils-linux', 'zfs-initramfs', 'zfs-zed']) }}"
+    __pve_install_packages: "{{ __pve_install_packages | union(['zfsutils-linux', 'zfs-initramfs', 'zfs-zed', 'zfs-dkms']) }}"
   when: pve_zfs_enabled
 
 - name: Stage any extra packages the user has specified
